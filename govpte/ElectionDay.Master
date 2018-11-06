@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ElectionDay.master.cs" Inherits="govpte.ElectionDay" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                <strong>Tuesday, November 8, 2016 Primary Election</strong><br />
+                <p>NOTE: Races that contain jurisdictions outside Macomb County will not show complete election results.</p>
+                <p>NOTE: These results are only Macomb County voters.</p>
+                <asp:GridView ID="gvRaces" runat="server" AutoGenerateColumns="False" OnRowDataBound="gvRaces_RowDataBound">
+                    <Columns>
+                        <asp:TemplateField HeaderText="Race">
+                            <ItemTemplate>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <asp:Label ID="lblBarGraph" runat="server" Text="&nbsp;"></asp:Label>
+
+                                        </td>
+                                        <td>
+                                            <asp:Label ID="lblCandidate" runat="server" style="font-weight: 700"></asp:Label>
+                                        </td>
+                                        <td>
+                                            <asp:Label ID="lblCandidateVotes" runat="server"></asp:Label>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </ItemTemplate>
+                        </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
