@@ -71,10 +71,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="General2018.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ElectionDay.Master.cs">
       <DependentUpon>ElectionDay.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -82,9 +91,17 @@
     <Compile Include="ElectionDay.Master.designer.cs">
       <DependentUpon>ElectionDay.Master</DependentUpon>
     </Compile>
+    <Compile Include="General2018.aspx.cs">
+      <DependentUpon>General2018.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General2018.aspx.designer.cs">
+      <DependentUpon>General2018.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="ParseElection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

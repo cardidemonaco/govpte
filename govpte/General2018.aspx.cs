@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -10,11 +9,11 @@ using HtmlAgilityPack;
 
 namespace govpte
 {
-    public partial class ElectionDay : System.Web.UI.MasterPage
+    public partial class General2018 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Make list of pages to search
+            //Override pages to use on election site
             List<string> urls = new List<string>
             {
                 "http://18.221.153.194/m24/301.html",
