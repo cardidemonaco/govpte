@@ -72,7 +72,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
-    <Content Include="General2018.aspx" />
+    <Content Include="General2018\General2018CardiAlysa.aspx" />
+    <Content Include="General2018\Proposals.aspx" />
+    <Content Include="General2018\Education.aspx" />
+    <Content Include="General2018\StateLegislatureCritical.aspx" />
+    <Content Include="General2018\Judicial.aspx" />
+    <Content Include="General2018\StateLegislature.aspx" />
+    <Content Include="General2018\CountyCommissionAll.aspx" />
+    <Content Include="General2018\CountyCommissionCritical.aspx" />
+    <Content Include="General2018\General2018.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -91,11 +99,67 @@
     <Compile Include="ElectionDay.Master.designer.cs">
       <DependentUpon>ElectionDay.Master</DependentUpon>
     </Compile>
-    <Compile Include="General2018.aspx.cs">
+    <Compile Include="General2018\General2018CardiAlysa.aspx.cs">
+      <DependentUpon>General2018CardiAlysa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General2018\General2018CardiAlysa.aspx.designer.cs">
+      <DependentUpon>General2018CardiAlysa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General2018\Proposals.aspx.cs">
+      <DependentUpon>Proposals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General2018\Proposals.aspx.designer.cs">
+      <DependentUpon>Proposals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General2018\Education.aspx.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General2018\Education.aspx.designer.cs">
+      <DependentUpon>Education.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General2018\StateLegislatureCritical.aspx.cs">
+      <DependentUpon>StateLegislatureCritical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General2018\StateLegislatureCritical.aspx.designer.cs">
+      <DependentUpon>StateLegislatureCritical.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General2018\Judicial.aspx.cs">
+      <DependentUpon>Judicial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General2018\Judicial.aspx.designer.cs">
+      <DependentUpon>Judicial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General2018\StateLegislature.aspx.cs">
+      <DependentUpon>StateLegislature.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General2018\StateLegislature.aspx.designer.cs">
+      <DependentUpon>StateLegislature.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General2018\CountyCommissionAll.aspx.cs">
+      <DependentUpon>CountyCommissionAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General2018\CountyCommissionAll.aspx.designer.cs">
+      <DependentUpon>CountyCommissionAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General2018\CountyCommissionCritical.aspx.cs">
+      <DependentUpon>CountyCommissionCritical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General2018\CountyCommissionCritical.aspx.designer.cs">
+      <DependentUpon>CountyCommissionCritical.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General2018\General2018.aspx.cs">
       <DependentUpon>General2018.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="General2018.aspx.designer.cs">
+    <Compile Include="General2018\General2018.aspx.designer.cs">
       <DependentUpon>General2018.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
