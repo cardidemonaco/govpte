@@ -10,26 +10,36 @@ namespace govpte
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                PopulateGridView();
+
+                EnableOrDisableTimer();
+            }
+        }
+
+        private void PopulateGridView()
+        {
             //Override pages to use on election site
             //  Eastpointe Council election is ranked-choice voting, so it is not listed
             List<string> urls = new List<string>
-            {
-                "http://18.221.153.194/m27/5.html", //Eastpointe Mayor
-                "http://18.221.153.194/m27/51.html", //Eastpointe Charter Amendment
-                "http://18.221.153.194/m27/52.html", //Eastpointe Community Schools Sinking Fund 
-                "http://18.221.153.194/m27/16.html", //Mt. Clemens Mayor
-                "http://18.221.153.194/m27/17.html", //Mt. Clemens City Commission
-                "http://18.221.153.194/m27/21.html", //Roseville City Council
-                "http://18.221.153.194/m27/23.html", //St. Clair Shores Council
-                "http://18.221.153.194/m27/25.html", //Sterling Heights Council
-                "http://18.221.153.194/m27/28.html", //Warren Mayor
-                "http://18.221.153.194/m27/29.html", //Warren Clerk
-                "http://18.221.153.194/m27/30.html", //Warren Treasurer
-                "http://18.221.153.194/m27/31.html", //Warren At-Large Council
-                "http://18.221.153.194/m27/32.html", //Warren District 1
-                "http://18.221.153.194/m27/34.html", //Warren District 3
-                "http://18.221.153.194/m27/35.html" //Warren District 4
-            };
+                {
+                    "http://18.221.153.194/m27/5.html", //Eastpointe Mayor
+                    "http://18.221.153.194/m27/51.html", //Eastpointe Charter Amendment
+                    "http://18.221.153.194/m27/52.html", //Eastpointe Community Schools Sinking Fund 
+                    "http://18.221.153.194/m27/16.html", //Mt. Clemens Mayor
+                    "http://18.221.153.194/m27/17.html", //Mt. Clemens City Commission
+                    "http://18.221.153.194/m27/21.html", //Roseville City Council
+                    "http://18.221.153.194/m27/23.html", //St. Clair Shores Council
+                    "http://18.221.153.194/m27/25.html", //Sterling Heights Council
+                    "http://18.221.153.194/m27/28.html", //Warren Mayor
+                    "http://18.221.153.194/m27/29.html", //Warren Clerk
+                    "http://18.221.153.194/m27/30.html", //Warren Treasurer
+                    "http://18.221.153.194/m27/31.html", //Warren At-Large Council
+                    "http://18.221.153.194/m27/32.html", //Warren District 1
+                    "http://18.221.153.194/m27/34.html", //Warren District 3
+                    "http://18.221.153.194/m27/35.html" //Warren District 4
+                };
 
             gvRaces.DataSource = urls;
             gvRaces.DataBind();
@@ -79,6 +89,26 @@ namespace govpte
                     i++;
                 }
             }
+        }
+
+        protected void cbAutoRefresh_CheckedChanged(object sender, EventArgs e)
+        {
+            EnableOrDisableTimer();
+        }
+
+        private void EnableOrDisableTimer()
+        {
+            //If checkbox checked, refresh the UpdatePanel once a minute...
+            if (cbAutoRefresh.Checked)
+                timerPage.Enabled = true;
+            else
+                timerPage.Enabled = false;
+        }
+
+        protected void timerPage_Tick(object sender, EventArgs e)
+        {
+            PopulateGridView();
+            updatePanelPage.Update();
         }
     }
 }
