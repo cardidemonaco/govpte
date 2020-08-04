@@ -80,6 +80,7 @@
     <Content Include="General2018\CountyCommissionCritical.aspx" />
     <Content Include="General2018\General2018.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="Primary2020\Default.aspx" />
     <Content Include="Web.config" />
     <Content Include="General2019\Default.aspx" />
   </ItemGroup>
@@ -165,6 +166,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="ParseElection.cs" />
+    <Compile Include="Primary2020\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Primary2020\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="General2019\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
