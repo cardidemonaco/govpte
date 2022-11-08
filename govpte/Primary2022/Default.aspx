@@ -14,7 +14,7 @@
         <asp:CheckBox ID="cbAutoRefresh" runat="server" Text="Auto refresh every 30 seconds" Checked="true" AutoPostBack="true" OnCheckedChanged="cbAutoRefresh_CheckedChanged" />
 
         <p>
-            <a target="_blank" href="http://18.221.153.194/m30/results.html">Official Macomb County Website - Race List</a>
+            <a target="_blank" href="https://electionresults.macombgov.org/m36/results.html">Official Macomb County Website - Race List</a>
         </p>
 
         <asp:GridView ID="gvRaces" runat="server" AutoGenerateColumns="False" OnRowDataBound="gvRaces_RowDataBound">
