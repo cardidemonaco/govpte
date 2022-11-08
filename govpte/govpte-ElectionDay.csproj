@@ -83,6 +83,7 @@
     <Content Include="General2020\Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Primary2020\Default.aspx" />
+    <Content Include="General2022\Default.aspx" />
     <Content Include="Primary2022\Default.aspx" />
     <Content Include="Web.config" />
     <Content Include="General2019\Default.aspx" />
@@ -188,6 +189,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Primary2020\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General2022\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General2022\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Primary2022\Default.aspx.cs">
