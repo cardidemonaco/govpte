@@ -79,6 +79,7 @@
     <Content Include="General2018\CountyCommissionAll.aspx" />
     <Content Include="General2018\CountyCommissionCritical.aspx" />
     <Content Include="General2018\General2018.aspx" />
+    <Content Include="General2023\Default.aspx" />
     <Content Include="General2021\Default.aspx" />
     <Content Include="General2020\Default.aspx" />
     <Content Include="Global.asax" />
@@ -164,6 +165,13 @@
     </Compile>
     <Compile Include="General2018\General2018.aspx.designer.cs">
       <DependentUpon>General2018.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="General2023\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="General2023\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="General2021\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
