@@ -14,7 +14,7 @@
 
             <asp:Menu ID="Menu2" runat="server" Font-Size="Larger">
                 <Items>
-                    <asp:MenuItem NavigateUrl="~/Primary2022/Default.aspx" Text="Cardi &amp; Alysa's Ballot" Value="Cardi &amp; Alysa's Ballot"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/General2023/Default.aspx" Text="Cardi &amp; Alysa's Ballot" Value="Cardi &amp; Alysa's Ballot"></asp:MenuItem>
                 </Items>
             </asp:Menu>
 
